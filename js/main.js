@@ -1,5 +1,5 @@
 fetch(
-        'http://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=b898573b7c51bba91d9c7661ffff6b52'
+        'http://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3d722d844a966fd33110bbbc21'
     )
     .then(function (resp) {
         return resp.json()
@@ -46,6 +46,6 @@ fetch(
                 wind = "NorthWest"
                 break
         }
-        
+
         document.querySelector('.wind').innerHTML = `${wind}, ${data.wind.speed} m/s`
     })
