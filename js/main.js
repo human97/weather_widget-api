@@ -1,4 +1,4 @@
-fetch('http://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3d722d844a966fd33110bbbc21');
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3d722d844a966fd33110bbbc21')
 
     .then(function (resp) {
         return resp.json()
