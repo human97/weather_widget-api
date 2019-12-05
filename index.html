@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather widget</title>
 </head>
+
 <body>
-    
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="wrap">
+                            <div class="weather">
+                                    <p class="weather--city text_bold"></p>
+                                    <div class='weather--item__date'>
+                                        <p class='date'></p>
+                                    </div>
+                                    <div class='weather--item__temperature'>
+                                        <p class='temp_day text_bold'></p>
+                                    </div>
+                                    <p class="cloud"></p>
+                                    <div class='weather--item__icon'>
+                                    </div>
+                                    <div class="weather--item__wind">
+                                        <p class="wind"></p>
+                                        <p class="wind_speed"></p>
+                                    </div>
+                                    <!-- /.weather--item__wind -->
+                                </div>
+                    </div>
+                    <!-- /.wrap -->
+                    
+                </div>
+                <!-- /.col-8 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,35 @@
+@import url(../assets/fonts/stylesheet.css);
+
+body {
+    font-size: 16px;
+    line-height: 10px;
+    font-family: 'Calibri', sans-serif;
+    text-align: center;
+    background: #ffffff;
+}
+
+.text_bold {
+    font-weight: bold;
+}
+
+.wrap {
+    background-color: #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.weather {
+    background-color: #99c8f5;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.temp_day{
+    font-size: 48px;
+}
+
+.cloud {
+    text-transform: capitalize;
+    margin: 0px;
+}
