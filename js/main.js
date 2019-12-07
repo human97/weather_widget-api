@@ -5,7 +5,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3
     })
 
     .then(function (data) {
-        //console.log(data)
+        console.log(data)
         document.querySelector('.weather--city').textContent = data.name
         document.querySelector('.date').innerHTML = `${new Date(data.dt*1000)
 .getDay() === new Date().getDay() ? 'Now' : new Date(data.dt*1000).toLocaleString('en', {
@@ -17,28 +17,29 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3
         document.querySelector('.cloud').innerHTML = `${data.weather[0]['description']}`
         document.querySelector('.weather--item__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">`
 
+        // перевел направление ветра в градусах, в буквенные значения на англ.
         let windDeg = data.wind.deg
         let wind = ''
         switch (true) {
-            case windDeg == 0:
+            case windDeg <= 10 && windDeg >= 370:
                 wind = "North"
                 break
-            case windDeg == 90:
+            case windDeg >= 80 && windDeg <= 100:
                 wind = "East"
                 break
-            case windDeg == 180:
+            case windDeg >= 170 && windDeg <= 190:
                 wind = "South"
                 break
-            case windDeg == 270:
+            case windDeg >= 260 && windDeg <= 280:
                 wind = "West"
                 break
-            case windDeg > 0 && windDeg < 90:
+            case windDeg > 10 && windDeg < 80:
                 wind = "NorthEast"
                 break
-            case windDeg > 90 && windDeg < 180:
+            case windDeg > 100 && windDeg < 170:
                 wind = "SouthEast"
                 break
-            case windDeg > 180 && windDeg < 270:
+            case windDeg > 190 && windDeg < 260:
                 wind = "SouthWest"
                 break
             default:
