@@ -47,5 +47,5 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3
                 break
         }
 
-        document.querySelector('.wind').innerHTML = `${wind}, ${data.wind.speed} m/s`
+         document.querySelector('.wind').innerHTML = `${wind}, ${data.wind.speed} m/s`
     })
