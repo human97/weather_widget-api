@@ -13,7 +13,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3
                 month: "short",
                 day: "numeric"
             })}`
-        document.querySelector('.temp_day').innerHTML = `${Math.round(data.main.temp-273)}&deg`
+        document.querySelector('.temp_day').innerHTML = `${Math.round(data.main.temp-273)}&nbsp&degC`
         document.querySelector('.cloud').innerHTML = `${data.weather[0]['description']}`
         document.querySelector('.weather--item__icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">`
 
@@ -47,5 +47,5 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Samara,RU&appid=6c585e3
                 break
         }
 
-         document.querySelector('.wind').innerHTML = `${wind}, ${data.wind.speed} m/s`
+        document.querySelector('.wind').innerHTML = `${wind}(${data.wind.deg}&deg;), ${data.wind.speed} m/s`
     })
